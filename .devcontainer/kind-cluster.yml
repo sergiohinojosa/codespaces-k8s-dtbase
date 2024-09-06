@@ -19,18 +19,3 @@ nodes:
     containerPort: 30100
     protocol: TCP
 - role: worker
-  kubeadmConfigPatches:
-  - |
-    kind: InitConfiguration
-    nodeRegistration:
-      kubeletExtraArgs:
-        node-labels: "ingress-ready=true"
-  extraPortMappings:
-  - hostPort: 80
-    containerPort: 80
-  - hostPort: 8080
-    containerPort: 8080
-    protocol: TCP
-  - hostPort: 30100
-    containerPort: 30100
-    protocol: TCP
