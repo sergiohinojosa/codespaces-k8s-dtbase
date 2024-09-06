@@ -17,6 +17,11 @@ nodes:
     containerPort: 30100
     protocol: TCP
 - role: worker
+  extraMounts:
+  - hostPath: /
+    containerPath: /mnt/root
+  - hostPath: /opt
+    containerPath: /mnt/volume_storage_mount 
 - role: worker
   extraPortMappings:
   # operator & webhook 
