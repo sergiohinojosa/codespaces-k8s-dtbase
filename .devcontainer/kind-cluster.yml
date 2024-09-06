@@ -17,6 +17,7 @@ nodes:
     containerPort: 30100
     protocol: TCP
 - role: worker
+- role: worker
   extraPortMappings:
   # operator & webhook 
   - hostPort: 80
