@@ -36,6 +36,10 @@ RUN chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
 WORKDIR /home/${USERNAME}
 USER ${USERNAME}
 
+RUN wget https://go.dev/dl/go1.23.1.linux-amd64.tar.gz
+RUN sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.23.1.linux-amd64.tar.gz
+RUN export PATH=$PATH:/usr/local/go/bin
+
 # Kubectl autocomplete
 RUN echo 'source <(kubectl completion zsh)' >>~/.zshrc
 
