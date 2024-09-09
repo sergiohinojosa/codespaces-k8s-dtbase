@@ -12,7 +12,7 @@ RUN chmod +x /tmp/scripts/docker.sh
 # update the container
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install zsh ca-certificates gnupg jq bash-completion golang -y && \
+    apt-get install zsh ca-certificates gnupg jq bash-completion -y && \
     apt-get autoremove -y && \
     apt-get clean -y
 
@@ -29,9 +29,6 @@ RUN KIND_RELEASE=$(curl --silent "https://api.github.com/repos/kubernetes-sigs/k
     && chmod +x /usr/local/bin/kind
 
 RUN /tmp/scripts/docker.sh
-
-# Installing Cloud Provider KIND for external services
-#RUN go install sigs.k8s.io/cloud-provider-kind@latest
 
 # change ownership of the home directory
 RUN chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
