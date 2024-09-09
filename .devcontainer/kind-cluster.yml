@@ -40,5 +40,5 @@ nodes:
   - hostPath: /opt
     containerPath: /mnt/volume_storage_mount
   ### testing pvc
-  - hostPath: /opt
-    containerPath: /data
+  # - hostPath: /opt
+  #   containerPath: /data
