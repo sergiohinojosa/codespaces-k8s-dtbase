@@ -38,4 +38,7 @@ nodes:
   - hostPath: /
     containerPath: /mnt/root
   - hostPath: /opt
-    containerPath: /mnt/volume_storage_mount 
+    containerPath: /mnt/volume_storage_mount
+  ### testing pvc
+  - hostPath: /
+    containerPath: /data
