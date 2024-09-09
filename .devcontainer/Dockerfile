@@ -30,6 +30,9 @@ RUN KIND_RELEASE=$(curl --silent "https://api.github.com/repos/kubernetes-sigs/k
 
 RUN /tmp/scripts/docker.sh
 
+# Installing Cloud Provider KIND for external services
+RUN go install sigs.k8s.io/cloud-provider-kind@latest
+
 # change ownership of the home directory
 RUN chown -R ${USERNAME}:${USERNAME} /home/${USERNAME}
 
