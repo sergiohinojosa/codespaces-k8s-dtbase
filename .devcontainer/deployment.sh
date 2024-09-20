@@ -61,3 +61,6 @@ kubectl -n dynatrace wait --for=condition=Ready pod --all --timeout=10m
 ### delete me
 # Wait for travel advisor system to be ready
 #kubectl -n log-generator wait --for=condition=Ready pod --all --timeout=10m
+
+### Deploy dt-boutique
+kubectl apply -f https://raw.githubusercontent.com/kyledharrington/dt-boutique/main/kind-dt-boutique.yaml -n dt-boutique

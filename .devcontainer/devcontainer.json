@@ -41,7 +41,7 @@
 
   // add labels
   "portsAttributes": {
-    "30100": { "label": "traveladvisor User Interface" }
+    "30100": { "label": "front end" }
   },
 
   "hostRequirements": {
