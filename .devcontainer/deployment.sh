@@ -15,6 +15,9 @@ kubectl delete pod --all -n istio-system
 ### 
 # deploy astronomy shop
 sed -i "s,NAME_TO_REPLACE,$NAME," astronomy-shop/default-values.yaml
+helm repo add open-telemetry https://open-telemetry.github.io/opentelemetry-helm-charts
+kubectl create namespace astronomy-shop
+kubectl label namespace astronomy-shop istio-injection=enabled
 helm install astronomy-shop open-telemetry/opentelemetry-demo --values astronomy-shop/default-values.yaml --namespace astronomy-shop --version "0.31.0"
 
 ### delete me
