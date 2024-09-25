@@ -19,13 +19,13 @@ nodes:
   - hostPort: 30200
     containerPort: 30200
     protocol: TCP
-    - hostPort: 30300
+  - hostPort: 30300
     containerPort: 30300
     protocol: TCP
   - hostPort: 30400
     containerPort: 30400
     protocol: TCP
-    - hostPort: 30500
+  - hostPort: 30500
     containerPort: 30500
     protocol: TCP
 - role: worker
@@ -41,12 +41,12 @@ nodes:
   - hostPort: 30200
     containerPort: 30200
     protocol: TCP
-    - hostPort: 30300
+  - hostPort: 30300
     containerPort: 30300
     protocol: TCP
   - hostPort: 30400
     containerPort: 30400
     protocol: TCP
-    - hostPort: 30500
+  - hostPort: 30500
     containerPort: 30500
     protocol: TCP
