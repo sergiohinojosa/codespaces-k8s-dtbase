@@ -37,7 +37,7 @@
   },
 
   // Use 'forwardPorts' to make a list of ports inside the container available locally.
-  "forwardPorts": [30100],
+  "forwardPorts": [30100, 30200, 30300, 30400, 30500],
 
   // add labels
   "portsAttributes": {
@@ -45,7 +45,7 @@
   },
 
   "hostRequirements": {
-    "cpus": 2
+    "cpus": 4
   },
 
   // Use 'postCreateCommand' to run commands after the container is created.

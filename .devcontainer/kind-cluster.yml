@@ -16,29 +16,16 @@ nodes:
   - hostPort: 30100
     containerPort: 30100
     protocol: TCP
+  - hostPort: 30200
+    containerPort: 30200
+    protocol: TCP
 - role: worker
   extraMounts:
   - hostPath: /
     containerPath: /mnt/root
   - hostPath: /opt
     containerPath: /mnt/volume_storage_mount 
-- role: worker
   extraPortMappings:
-  # operator & webhook 
+  # referecnce
   - hostPort: 80
     containerPort: 80
-    protocol: TCP
-  - hostPort: 8443
-    containerPort: 8443
-    protocol: TCP
-  - hostPort: 10080
-    containerPort: 10080
-    protocol: TCP
-  extraMounts:
-  - hostPath: /
-    containerPath: /mnt/root
-  - hostPath: /opt
-    containerPath: /mnt/volume_storage_mount
-  ### testing pvc
-  # - hostPath: /opt
-  #   containerPath: /data
