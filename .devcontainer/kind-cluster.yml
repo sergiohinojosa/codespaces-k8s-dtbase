@@ -16,37 +16,32 @@ nodes:
   - hostPort: 30100
     containerPort: 30100
     protocol: TCP
-  - hostPort: 30200
-    containerPort: 30200
+  - hostPort: 30110
+    containerPort: 30110
     protocol: TCP
-  - hostPort: 30300
-    containerPort: 30300
+  - hostPort: 30120
+    containerPort: 30120
     protocol: TCP
-  - hostPort: 30400
-    containerPort: 30400
+  - hostPort: 30130
+    containerPort: 30130
     protocol: TCP
-  - hostPort: 30500
-    containerPort: 30500
+  - hostPort: 30140
+    containerPort: 30140
     protocol: TCP
 - role: worker
-  extraMounts:
-  - hostPath: /
-    containerPath: /mnt/root
-  - hostPath: /opt
-    containerPath: /mnt/volume_storage_mount 
   extraPortMappings:
   - hostPort: 30100
     containerPort: 30100
     protocol: TCP
-  - hostPort: 30200
-    containerPort: 30200
+  - hostPort: 30110
+    containerPort: 30110
     protocol: TCP
-  - hostPort: 30300
-    containerPort: 30300
+  - hostPort: 30120
+    containerPort: 30120
     protocol: TCP
-  - hostPort: 30400
-    containerPort: 30400
+  - hostPort: 30130
+    containerPort: 30130
     protocol: TCP
-  - hostPort: 30500
-    containerPort: 30500
+  - hostPort: 30140
+    containerPort: 30140
     protocol: TCP
