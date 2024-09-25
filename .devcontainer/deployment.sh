@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.22.1 sh -
+# #istio setup
 export PATH=$PWD/istio-1.22.1/bin:$PATH
 istioctl install -f istio/istio-operator.yaml --skip-confirmation
 
