@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.22.1 sh -
+export PATH=$PWD/istio-1.22.1/bin:$PATH
+istioctl install -f istio/istio-operator.yaml --skip-confirmation
+
 ### delete me
 #kubectl create namespace log-generator
 # kubectl create namespace dynatrace
