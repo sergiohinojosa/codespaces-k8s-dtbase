@@ -24,17 +24,16 @@ nodes:
     containerPath: /mnt/root
   extraPortMappings:
   - hostPort: 30100
-    containerPort: 30100
-    protocol: TCP
+    containerPort: 15021
   - hostPort: 30110
-    containerPort: 30110
+    containerPort: 8080
     protocol: TCP
   - hostPort: 30120
-    containerPort: 30120
+    containerPort: 8443
     protocol: TCP
-  - hostPort: 30130
-    containerPort: 30130
+  - hostPort: 30230
+    containerPort: 31400
     protocol: TCP
   - hostPort: 30140
-    containerPort: 30140
+    containerPort: 15443
     protocol: TCP
