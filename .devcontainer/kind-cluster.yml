@@ -9,20 +9,6 @@ nodes:
     nodeRegistration:
       kubeletExtraArgs:
         node-labels: "ingress-ready=true"
-  extraPortMappings:
-  - hostPort: 80
-    containerPort: 80
-    protocol: TCP
-  - hostPort: 443
-    containerPort: 443
-    protocol: TCP
-- role: worker
-  kubeadmConfigPatches:
-  - |
-    kind: InitConfiguration
-    nodeRegistration:
-      kubeletExtraArgs:
-        node-labels: "ingress-ready=true"
   extraMounts:
   - hostPath: /
     containerPath: /mnt/root
