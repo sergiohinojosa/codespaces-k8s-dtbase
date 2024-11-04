@@ -24,3 +24,6 @@ chmod 744 istio/deploy-istio-astronomy-shop.sh
 #sleep ?
 # chmod 744 istio/deploy-istio-astronomy-shop.sh
 #./istio/deploy-istio-astronomy-shop.sh
+
+# k9s installation for easier handling
+curl -sS https://webi.sh/k9s | sh
